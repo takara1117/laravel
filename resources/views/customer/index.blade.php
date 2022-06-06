@@ -28,7 +28,7 @@
 					</div>
 					<div class="ml-56 pt-40">
 						<button onClick="location.href='/customer/login'" class=" bg-green-700 text-white font-bold py-3 px-6 rounded">
-						<font class="text-lg">ログイン</font>
+							<font class="text-lg">ログイン</font>
 						</button>
 					</div>
 				</div>
