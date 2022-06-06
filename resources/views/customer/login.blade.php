@@ -25,8 +25,8 @@
 					{{ $message }}
 					@enderror
 				</div>
-				<div class="ml-48 pt-7">
-					<button type="submit" class="bg-green-700 text-white font-bold py-2 px-4 rounded">
+				<div class="ml-48 pt-10">
+					<button type="submit" class="bg-green-700 text-white font-bold py-3 px-5 rounded">
 						ログイン
 					</button>
 				</div>
