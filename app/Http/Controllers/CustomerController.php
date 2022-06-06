@@ -52,6 +52,23 @@
 			]);
 		}
 
+		//一覧表示処理
+		public function list(Request $request) 
+		{
+			if (session()->has('customer_id')) {
+				$customer = Customer::find(session()->get('customer_id'));
+			} else {
+				$customer = null;
+			}
+
+			$customers = Customer::all();
+
+			return view('customer.list', [
+				'customers' => $customers,
+				'customer'  => $customer,
+			]);
+		}
+
 		//ログイン処理
 		public function login()
 		{
@@ -88,23 +105,5 @@
 		public function new() 
 		{
 			return view('customer.new');
-		}
-
-		//一覧表示処理
-		public function list(Request $request) 
-		{
-
-			if (session()->has('customer_id')) {
-				$customer = Customer::find(session()->get('customer_id'));
-			} else {
-				$customer = null;
-			}
-
-			$customers = Customer::all();
-
-			return view('customer.list', [
-				'customers' => $customers,
-				'customer'  => $customer,
-			]);
 		}
 	} 
